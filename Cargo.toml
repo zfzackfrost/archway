@@ -1,9 +1,15 @@
 [package]
 name = "archway"
-version = "0.1.0"
+version = "0.1.2"
 edition = "2021"
-keywords = ["no-std", "pointer", "rc", "arc", "shared"]
 description = "Rust traits for Rc and Arc interoperation"
+readme = "README.md"
+keywords = ["no-std", "pointer", "rc", "arc", "shared"]
+categories = ["no-std", "rust-patterns", "memory-management"]
+documentation = "https://docs.rs/archway"
+repository = "https://github.com/zfzackfrost/archway"
+homepage = "https://github.com/zfzackfrost/archway"
+license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
