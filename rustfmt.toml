@@ -1,0 +1,9 @@
+merge_derives = false
+reorder_imports = true
+format_code_in_doc_comments = true
+format_macro_bodies = true
+format_macro_matchers = true
+force_multiline_blocks = true
+group_imports = "Preserve"
+imports_granularity = "Preserve"
+max_width = 135

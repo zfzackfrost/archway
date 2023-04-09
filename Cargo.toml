@@ -1,0 +1,10 @@
+[package]
+name = "archway"
+version = "0.1.0"
+edition = "2021"
+keywords = ["no-std", "pointer", "rc", "arc", "shared"]
+description = "Rust traits for Rc and Arc interoperation"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
