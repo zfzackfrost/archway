@@ -16,6 +16,10 @@ impl TestTrait for Second {
     }
 }
 
+pub fn eq_shared_value_from_kind<P: PointerKind>(value: i32) {
+    let shared = P::Shared::<i32>::from(value);
+    assert_eq!(42_i32, shared.as_ref().clone())
+}
 pub fn eq_shared_value_from<P: SharedPointer<i32>>(value: i32) {
     let shared = P::from(value);
     assert_eq!(42_i32, shared.as_ref().clone())

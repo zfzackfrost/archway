@@ -1,5 +1,6 @@
 use alloc::rc::{Rc, Weak};
 
+use crate::kind::PointerKind;
 use crate::shared::{AnySharedPointer, SharedPointer};
 use crate::weak::AnyWeakPointer;
 
@@ -15,4 +16,13 @@ impl<T: ?Sized> AnyWeakPointer<T> for Weak<T> {
     fn upgrade(&self) -> Option<Self::Shared> {
         Weak::upgrade(self)
     }
+}
+
+/// [`PointerKind`] implementor for [`Rc`].
+#[derive(Debug, Copy, Clone)]
+pub struct RcKind;
+
+impl PointerKind for RcKind {
+    type Shared<T> = Rc<T>;
+    type Weak<T> = Weak<T>;
 }
