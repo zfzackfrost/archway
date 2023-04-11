@@ -1,7 +1,7 @@
 use crate::shared::AnySharedPointer;
 
 /// Trait for a weak pointer
-pub trait AnyWeakPointer<T: ?Sized> {
+pub trait AnyWeakPointer<T: Sized> {
     /// Corresponding shared pointer type
     type Shared: AnySharedPointer<T>;
 

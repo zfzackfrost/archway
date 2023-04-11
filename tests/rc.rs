@@ -12,14 +12,6 @@ fn test_shared_value() {
     eq_shared_value(42_i32, shared);
 }
 #[test]
-fn test_shared_dyn_value() {
-    let shared: Rc<dyn TestTrait> = Rc::new(First(10, 20));
-    eq_shared_dyn_value(10, shared);
-
-    let shared: Rc<dyn TestTrait> = Rc::new(Second(10, 20));
-    eq_shared_dyn_value(20, shared);
-}
-#[test]
 fn test_shared_value_from() {
     eq_shared_value_from::<Rc<_>>(42_i32);
 }
