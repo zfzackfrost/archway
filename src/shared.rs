@@ -11,3 +11,6 @@ pub trait AnySharedPointer<T: Sized>: AsRef<T> + Borrow<T> + Clone + Deref<Targe
     /// Return `self` downgraded to a weak pointer.
     fn downgrade(&self) -> Self::Weak;
 }
+
+/// Return type for the `downgrade` function of the [`AnySharedPointer<T>`] type `P`
+pub type Downgraded<P, T> = <P as AnySharedPointer<T>>::Weak;
